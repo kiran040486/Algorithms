@@ -71,21 +71,4 @@ public class BinaryTree {
 	  }
 	
 	
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		BinaryTree btree = new BinaryTree(5);
-		
-		btree.insert(btree.root, 4);
-		btree.insert(btree.root, 3);
-		btree.insert(btree.root, 8);
-		btree.insert(btree.root, 7);
-		btree.insert(btree.root, 2);
-		btree.printInOrder(btree.root);
-		
-		
-
-	}
-
 }
