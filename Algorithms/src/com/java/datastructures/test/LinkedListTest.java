@@ -15,6 +15,13 @@ public class LinkedListTest {
 		list.add(5, 3);
 		list.ListIterator();
 		System.out.println("Size of the list is :"+list.getSize());
+		//LinkedList list1 = new LinkedList();
+		
+		 //list1.setHead(list.reverse(list.getHead()));
+		 
+		 //list1.ListIterator();
+		 
+		System.out.println("kth element is"+ list.findKfromLast(list.getHead(), 2)); 
 		
 	}
 

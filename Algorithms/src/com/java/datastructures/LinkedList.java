@@ -89,6 +89,58 @@ public class LinkedList {
 		}
 	}
 
+	public LinkedListNode reverse(LinkedListNode head) {
+		LinkedListNode prev = null;
+		LinkedListNode current = head;
+		LinkedListNode next = current.next;
+
+		while (true) {
+			current.next = prev;
+
+			if (next == null)
+				break;
+
+			prev = current;
+			current = next;
+			next = next.next;
+
+		}
+
+		return current;
+
+	}
+
+	public int findKfromLast(LinkedListNode head, int k) {
+
+		if (head == null)
+			return -1;
+
+		if (k > this.getSize())
+			return -1;
+
+		int index = 0;
+
+		LinkedListNode first = head;
+		while (first.next != null) {
+			if (index == k)
+				break;
+			first = first.next;
+			index++;
+		}
+
+		LinkedListNode second = head;
+
+		while (first.next != null) {
+
+			first = first.next;
+			second = second.next;
+
+		}
+
+		return second.data;
+
+	}
+
 	class LinkedListNode {
 		int data;
 		LinkedListNode next;
